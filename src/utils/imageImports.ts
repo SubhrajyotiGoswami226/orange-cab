@@ -1,0 +1,24 @@
+// Image imports for proper bundling
+import heroImage from '@/assets/hero-bg.jpg';
+import swiftDzire from '@/assets/swift-dzire.jpg';
+import innovaCrysta from '@/assets/innova-crysta.jpg';
+import tempoTraveller from '@/assets/tempo-traveller.jpg';
+import meghalayaTour from '@/assets/meghalaya-tour.jpg';
+import kazirangaSafari from '@/assets/kaziranga-safari.jpg';
+import tawangMonastery from '@/assets/tawang-monastery.jpg';
+
+export const images = {
+  hero: heroImage,
+  'swift-dzire': swiftDzire,
+  'innova-crysta': innovaCrysta,
+  'tempo-traveller': tempoTraveller,
+  'meghalaya-tour': meghalayaTour,
+  'kaziranga-safari': kazirangaSafari,
+  'tawang-monastery': tawangMonastery,
+};
+
+export const getImageUrl = (imagePath: string): string => {
+  // Extract filename from path like "/src/assets/swift-dzire.jpg"
+  const filename = imagePath.split('/').pop()?.replace('.jpg', '') || '';
+  return images[filename as keyof typeof images] || imagePath;
+};
