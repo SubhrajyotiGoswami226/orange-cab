@@ -66,7 +66,7 @@ export const ServiceCard = ({
 
       <CardContent className="p-6">
         {/* Header */}
-        <div className="flex items-start justify-between mb-4 min-w-0">
+        <div className="flex flex-wrap items-start justify-between mb-4 min-w-0">
           <div className="flex-shrink-0">
             <h3 className="text-xl font-bold text-foreground mb-2">
               {name}
@@ -86,7 +86,7 @@ export const ServiceCard = ({
               </span>
             </div>
           </div>
-          <div className="text-right">
+          <div className="w-full sm:w-auto text-center sm:text-right mt-2 sm:mt-0">
             <div className="text-2xl font-bold text-primary whitespace-nowrap">
               {price}
             </div>
