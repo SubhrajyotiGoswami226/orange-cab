@@ -84,6 +84,23 @@
         ],
         "limits": "80km and 8 hours limit applicable",
         "popular": false
+      },
+      {
+        "id": "force_urbania",
+        "name": "Force Motors Urbania",
+        "price": "₹7500",
+        "period": "per day",
+        "image": "/src/assets/tempo-traveller.jpg",
+        "rating": 5,
+        "features": [
+          "Large group accommodation",
+          "Car charges included",
+          "Fuel included",
+          "Driver charges included",
+          "Driver food & lodging included"
+        ],
+        "limits": "80km and 8 hours limit applicable",
+        "popular": false
       }
     ]
   },
