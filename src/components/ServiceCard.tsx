@@ -38,7 +38,7 @@ export const ServiceCard = ({
     <Card
       className={cn(
         'group relative overflow-hidden transition-elegant hover:shadow-hover hover:-translate-y-2',
-        'gradient-card border-border/50',
+        'gradient-card border-border/50 h-full flex flex-col',
         popular && 'ring-2 ring-primary/20 shadow-elegant',
         className
       )}
@@ -64,7 +64,7 @@ export const ServiceCard = ({
         </div>
       </CardHeader>
 
-      <CardContent className="p-6">
+      <CardContent className="p-6 flex-grow">
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div>
