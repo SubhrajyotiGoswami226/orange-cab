@@ -64,11 +64,11 @@ export const ServiceCard = ({
         </div>
       </CardHeader>
 
-      <CardContent className="p-6 flex-grow">
+      <CardContent className="p-4 md:p-6 flex-grow">
         {/* Header */}
-        <div className="flex items-start justify-between mb-4">
-          <div>
-            <h3 className="text-xl font-bold text-foreground mb-2">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+          <div className="flex-1 min-w-0">
+            <h3 className="text-lg md:text-xl font-bold text-foreground mb-2 line-clamp-2">
               {name}
             </h3>
             <div className="flex items-center gap-1 mb-2">
@@ -76,21 +76,21 @@ export const ServiceCard = ({
                 <Star
                   key={i}
                   className={cn(
-                    'w-4 h-4',
+                    'w-3 h-3 md:w-4 md:h-4',
                     i < rating ? 'text-primary fill-current' : 'text-muted-foreground'
                   )}
                 />
               ))}
-              <span className="text-sm text-muted-foreground ml-1">
+              <span className="text-xs md:text-sm text-muted-foreground ml-1">
                 {rating}/5
               </span>
             </div>
           </div>
-          <div className="text-right">
-            <div className="text-2xl font-bold text-primary">
+          <div className="text-right sm:text-right flex-shrink-0">
+            <div className="text-xl md:text-2xl font-bold text-primary">
               {price}
             </div>
-            <div className="text-sm text-muted-foreground">
+            <div className="text-xs md:text-sm text-muted-foreground">
               {period}
             </div>
           </div>
@@ -98,13 +98,13 @@ export const ServiceCard = ({
 
         {/* Features */}
         <div className="space-y-2 mb-4">
-          <h4 className="font-semibold text-foreground mb-2">
+          <h4 className="text-sm md:text-base font-semibold text-foreground mb-2">
             Inclusions:
           </h4>
           {features.map((feature, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-primary flex-shrink-0" />
-              <span className="text-sm text-muted-foreground">
+            <div key={index} className="flex items-start gap-2">
+              <Check className="w-3 h-3 md:w-4 md:h-4 text-primary flex-shrink-0 mt-0.5" />
+              <span className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 {feature}
               </span>
             </div>
@@ -113,19 +113,19 @@ export const ServiceCard = ({
 
         {/* Limits */}
         {limits && (
-          <div className="text-sm text-muted-foreground bg-muted/50 p-3 rounded-lg">
+          <div className="text-xs md:text-sm text-muted-foreground bg-muted/50 p-2 md:p-3 rounded-lg">
             <strong>Note:</strong> {limits}
           </div>
         )}
       </CardContent>
 
-      <CardFooter className="p-6 pt-0">
+      <CardFooter className="p-4 md:p-6 pt-0">
         <Button
           onClick={handleBooking}
-          className="w-full gradient-primary hover:shadow-hover transition-elegant"
+          className="w-full gradient-primary hover:shadow-hover transition-elegant text-sm md:text-base"
         >
           Book Now
-          <ExternalLink className="w-4 h-4 ml-2" />
+          <ExternalLink className="w-3 h-3 md:w-4 md:h-4 ml-2" />
         </Button>
       </CardFooter>
     </Card>

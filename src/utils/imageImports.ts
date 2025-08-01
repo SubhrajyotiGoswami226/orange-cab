@@ -6,6 +6,7 @@ import tempoTraveller from '@/assets/tempo-traveller.jpg';
 import meghalayaTour from '@/assets/meghalaya-tour.jpg';
 import kazirangaSafari from '@/assets/kaziranga-safari.jpg';
 import tawangMonastery from '@/assets/tawang-monastery.jpg';
+import forceUrbania from '@/assets/force-urbania.jpg';
 
 export const images = {
   hero: heroImage,
@@ -15,6 +16,7 @@ export const images = {
   'meghalaya-tour': meghalayaTour,
   'kaziranga-safari': kazirangaSafari,
   'tawang-monastery': tawangMonastery,
+  'force-urbania': forceUrbania,
 };
 
 export const getImageUrl = (imagePath: string): string => {
