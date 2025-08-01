@@ -20,7 +20,7 @@ export const Hero = ({ title, subtitle, description, ctaButtons }: HeroProps) =>
     if (action === 'book') {
       window.open('https://wa.link/bg5sy0', '_blank');
     } else if (action === 'call') {
-      window.open('tel:+919349365000', '_self');
+      window.open('tel:+919394939500', '_self');
     }
   };
 
