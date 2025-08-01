@@ -38,7 +38,7 @@
       {
         "id": "city_cab",
         "name": "City Cabs",
-        "price": "₹3000",
+        "price": "₹10,000",
         "period": "per day",
         "image": "/src/assets/swift-dzire.jpg",
         "rating": 5,
@@ -54,7 +54,7 @@
       {
         "id": "innova_cab",
         "name": "8 Seater Innova Cabs",
-        "price": "₹4500",
+        "price": "₹11,000",
         "period": "per day",
         "image": "/src/assets/innova-crysta.jpg",
         "rating": 5,
@@ -71,7 +71,7 @@
       {
         "id": "tempo_traveller",
         "name": "Tempo Traveller",
-        "price": "₹6500",
+        "price": "₹12,000",
         "period": "per day",
         "image": "/src/assets/tempo-traveller.jpg",
         "rating": 5,
@@ -88,7 +88,7 @@
       {
         "id": "force_urbania",
         "name": "Force Motors Urbania",
-        "price": "₹7500",
+        "price": "₹12,000",
         "period": "per day",
         "image": "/src/assets/tempo-traveller.jpg",
         "rating": 5,
