@@ -53,7 +53,7 @@
       },
       {
         "id": "innova_cab",
-        "name": "8 Seater Innova Cabs",
+        "name": "Innova Cabs",
         "price": "₹4500",
         "period": "per day",
         "image": "/src/assets/innova-crysta.jpg",
@@ -87,8 +87,8 @@
       },
       {
         "id": "force_urbania",
-        "name": "Force Motors Urbania",
-        "price": "₹12,000",
+        "name": "Urbania",
+        "price": "₹10,000-₹12,000",
         "period": "per day",
         "image": "/force-urbania1.jpg",
         "rating": 5,
@@ -140,9 +140,9 @@
       },
       {
         "id": "tawang_tour",
-        "name": "Tawang Monastery Tour",
+        "name": "Tawang Tour",
         "duration": "6 days, 5 nights",
-        "description": "Visit the famous Tawang Monastery and explore the scenic beauty of Arunachal Pradesh.",
+        "description": "Visit the famous Tawang and explore the scenic beauty of Arunachal Pradesh.",
         "image": "/src/assets/tawang-monastery.jpg",
         "highlights": [
           "Tawang Monastery visit",
