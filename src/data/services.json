@@ -90,7 +90,7 @@
         "name": "Force Motors Urbania",
         "price": "₹12,000",
         "period": "per day",
-        "image": "/src/assets/force-urbania1.jpg",
+        "image": "/force-urbania1.jpg",
         "rating": 5,
         "features": [
           "Large group accommodation",
