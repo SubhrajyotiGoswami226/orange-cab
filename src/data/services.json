@@ -10,7 +10,7 @@
         "primary": true
       },
       {
-        "text": "Call +91-934-936500",
+        "text": "Call +91-9394939500",
         "action": "call",
         "primary": false
       }
@@ -27,7 +27,7 @@
       { "label": "Contact", "href": "#contact", "id": "contact" }
     ],
     "ctaButton": {
-      "text": "Call +91-934-936500",
+      "text": "Call +91-9394939500",
       "action": "call"
     }
   },
@@ -161,7 +161,7 @@
     }
   ],
   "contact": {
-    "phone": "+91-934-936500",
+    "phone": "+91-9394939500",
     "whatsapp": "https://wa.link/bg5sy0",
     "email": "info@orangecabs.in",
     "address": "Guwahati, Assam, India"

@@ -34,7 +34,7 @@ export const Navbar = ({ logo, items, ctaButton }: NavbarProps) => {
 
   const handleCTA = () => {
     if (ctaButton.action === 'call') {
-      window.open('tel:+919349365000', '_self');
+      window.open('tel:+919394939500', '_self');
     }
   };
 
