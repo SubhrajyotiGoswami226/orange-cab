@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import UrbaniaBooking from "./pages/UrbaniaBooking";
-import TermsAndConditions from '@/path/to/TermsAnsConditions';
+import TermsAndConditions from '@/path/to/TermsAndConditions';
 
 const queryClient = new QueryClient();
 
