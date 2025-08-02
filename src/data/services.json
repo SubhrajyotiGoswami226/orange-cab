@@ -152,22 +152,7 @@
         ],
         "price": "Contact for pricing",
         "popular": false
-      },
-      {
-        "id": "anini_tour",
-        "name": "Mechuka Anini Tour",
-        "duration": "10 days, 9 nights",
-        "description": "The Mechuka Anini Tour Package offers an immersive 10-day journey through Eastern Arunachal Pradesh, highlighting the serene beauty of Mechuka and Anini.",
-        "image": "/src/assets/tawang-monastery.jpg",
-        "highlights": [
-          "Visit Samten Yongcha Monastery",
-          "Trekking to Dorjeeling Hilltop",
-          "Adi tribal cuisine dinner",
-          "Comfortable transportation"
-        ],
-        "price": "Contact for pricing",
-        "popular": false
-      },
+      }
     ]
   },
   "features": [
