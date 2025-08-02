@@ -24,7 +24,8 @@
       { "label": "Our Fleet", "href": "#fleet", "id": "fleet" },
       { "label": "Tours", "href": "#tours", "id": "tours" },
       { "label": "About Us", "href": "#about", "id": "about" },
-      { "label": "Contact", "href": "#contact", "id": "contact" }
+      { "label": "Contact", "href": "#contact", "id": "contact" },
+      { "label": "Terms", "href": "/terms-and-conditions", "id": "terms" }
     ],
     "ctaButton": {
       "text": "Call +91-9394939500",
@@ -149,6 +150,40 @@
           "Scenic mountain views",
           "Cultural experiences",
           "Comfortable transportation"
+        ],
+        "price": "Contact for pricing",
+        "popular": false
+      },
+      {
+        "id": "anini_mechuka_tour",
+        "name": "Anini Mechuka Tour",
+        "duration": "10 days, 9 nights",
+        "description": "Explore the pristine beauty of Anini and Mechuka in Arunachal Pradesh. Experience untouched landscapes, tribal culture, and breathtaking mountain views.",
+        "image": "/src/assets/anini-mechuka.jpg",
+        "highlights": [
+          "Visit remote Anini valley",
+          "Explore Mechuka's scenic beauty",
+          "Experience tribal culture",
+          "Mountain trekking opportunities",
+          "Photography paradise",
+          "Local homestay experience"
+        ],
+        "price": "Contact for pricing",
+        "popular": false
+      },
+      {
+        "id": "nagaland_tour",
+        "name": "Nagaland Cultural Tour",
+        "duration": "5 days, 4 nights",
+        "description": "Discover the rich cultural heritage of Nagaland. Experience Naga traditions, visit tribal villages, and enjoy the scenic beauty of the Land of Festivals.",
+        "image": "/src/assets/nagaland-tour.jpg",
+        "highlights": [
+          "Kohima War Cemetery visit",
+          "Traditional Naga villages",
+          "Local handicrafts shopping",
+          "Cultural performances",
+          "Hornbill Festival (seasonal)",
+          "Local cuisine tasting"
         ],
         "price": "Contact for pricing",
         "popular": false

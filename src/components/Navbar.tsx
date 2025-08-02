@@ -65,13 +65,17 @@ export const Navbar = ({ logo, items, ctaButton }: NavbarProps) => {
               {items.map((item) => (
                 <a
                   key={item.id}
-                  href={item.href}
+                  href={item.href.startsWith('/') ? item.href : item.href}
                   className={cn(
                     'text-sm font-medium transition-elegant hover:text-primary',
                     isScrolled
                       ? 'text-foreground'
                       : 'text-white hover:text-primary-light'
                   )}
+                  onClick={item.href.startsWith('/') ? (e) => {
+                    e.preventDefault();
+                    window.location.href = item.href;
+                  } : undefined}
                 >
                   {item.label}
                 </a>
@@ -156,7 +160,7 @@ export const Navbar = ({ logo, items, ctaButton }: NavbarProps) => {
               {items.map((item) => (
                 <a
                   key={item.id}
-                  href={item.href}
+                  href={item.href.startsWith('/') ? item.href : item.href}
                   className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-elegant"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
