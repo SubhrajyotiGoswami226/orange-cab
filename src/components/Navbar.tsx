@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Phone, Menu, X, Sun, Moon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTheme } from '@/hooks/useTheme';
+import { useNavigate } from 'react-router-dom';
 
 interface NavItem {
   label: string;
@@ -23,6 +24,7 @@ export const Navbar = ({ logo, items, ctaButton }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,17 +67,21 @@ export const Navbar = ({ logo, items, ctaButton }: NavbarProps) => {
               {items.map((item) => (
                 <a
                   key={item.id}
-                  href={item.href.startsWith('/') ? item.href : item.href}
+                  href={item.href}
                   className={cn(
                     'text-sm font-medium transition-elegant hover:text-primary',
                     isScrolled
                       ? 'text-foreground'
                       : 'text-white hover:text-primary-light'
                   )}
-                  onClick={item.href.startsWith('/') ? (e) => {
-                    e.preventDefault();
-                    window.location.href = item.href;
-                  } : undefined}
+                  onClick={
+                    item.href.startsWith('/')
+                      ? (e) => {
+                          e.preventDefault();
+                          navigate(item.href);
+                        }
+                      : undefined
+                  }
                 >
                   {item.label}
                 </a>
