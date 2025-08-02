@@ -4,8 +4,13 @@ import { Badge } from '@/components/ui/badge';
 import { Star, Users, Fuel, Shield, ArrowLeft, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { getImageUrl } from '@/utils/imageImports';
+import { useEffect } from 'react';
 
 const UrbaniaBooking = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleBooking = () => {
     const message = "Hi Team, I am interested for Urbania 17-seater booking";
     const encodedMessage = encodeURIComponent(message);
@@ -57,7 +62,7 @@ const UrbaniaBooking = () => {
           {/* Image */}
           <div className="relative">
             <img
-              src={getImageUrl('force-urbania.jpg')}
+              src="/force-urbania1.jpg"
               alt="Force Urbania 17 Seater"
               className="w-full h-[400px] object-cover rounded-lg shadow-lg"
             />
