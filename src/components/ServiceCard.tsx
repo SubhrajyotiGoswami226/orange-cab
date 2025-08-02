@@ -97,7 +97,10 @@ export const ServiceCard = ({
             </div>
           </div>
           <div className="w-full sm:w-auto text-center sm:text-right mt-2 sm:mt-0">
-            <div className="text-2xl font-bold text-primary whitespace-nowrap">
+            <div
+              className="overflow-x-auto text-2xl font-bold text-primary whitespace-nowrap"
+              style={{ maxWidth: "100%" }}
+            >
               {price}
             </div>
             <div className="text-sm text-muted-foreground">
