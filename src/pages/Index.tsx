@@ -5,6 +5,7 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { TourCard } from '@/components/TourCard';
 import { FeatureCard } from '@/components/FeatureCard';
 import { ContactSection } from '@/components/ContactSection';
+import FloatingActions from '@/components/FloatingActions';
 import servicesData from '@/data/services.json';
 
 const Index = () => {
@@ -124,6 +125,9 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Floating Action Buttons */}
+      <FloatingActions />
     </div>
   );
 };

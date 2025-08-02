@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Star, Check, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getImageUrl } from '@/utils/imageImports';
+import { useNavigate } from 'react-router-dom';
 
 interface ServiceCardProps {
   id: string;
@@ -30,8 +31,14 @@ export const ServiceCard = ({
   popular = false,
   className
 }: ServiceCardProps) => {
+  const navigate = useNavigate();
+
   const handleBooking = () => {
-    window.open('https://wa.link/bg5sy0', '_blank');
+    if (id === 'force_urbania') {
+      navigate('/urbania-booking');
+    } else {
+      window.open('https://wa.link/bg5sy0', '_blank');
+    }
   };
 
   return (
