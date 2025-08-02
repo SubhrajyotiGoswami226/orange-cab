@@ -159,7 +159,7 @@
         "name": "Anini Mechuka Tour",
         "duration": "10 days, 9 nights",
         "description": "Explore the pristine beauty of Anini and Mechuka in Arunachal Pradesh. Experience untouched landscapes, tribal culture, and breathtaking mountain views.",
-        "image": "/src/assets/anini.jpg",
+        "image": "/anini.jpg",
         "highlights": [
           "Visit remote Anini valley",
           "Explore Mechuka's scenic beauty",
@@ -176,7 +176,7 @@
         "name": "Nagaland Cultural Tour",
         "duration": "5 days, 4 nights",
         "description": "Discover the rich cultural heritage of Nagaland. Experience Naga traditions, visit tribal villages, and enjoy the scenic beauty of the Land of Festivals.",
-        "image": "/src/assets/nagaland.jpg",
+        "image": "/nagaland.jpg",
         "highlights": [
           "Kohima War Cemetery visit",
           "Traditional Naga villages",
