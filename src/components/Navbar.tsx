@@ -160,7 +160,7 @@ export const Navbar = ({ logo, items, ctaButton }: NavbarProps) => {
               {items.map((item) => (
                 <a
                   key={item.id}
-                  href={item.href.startsWith('/') ? item.href : item.href}
+                  href={item.href}
                   className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-elegant"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
