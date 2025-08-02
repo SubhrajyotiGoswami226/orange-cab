@@ -15,14 +15,14 @@ const FloatingActions = () => {
       <Button
         onClick={handleCall}
         size="icon"
-        className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-green-600 hover:bg-green-700 text-white"
+        className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 gradient-primary"
       >
         <Phone className="w-6 h-6" />
       </Button>
       <Button
         onClick={handleWhatsApp}
         size="icon" 
-        className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] text-white"
+        className="w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 gradient-primary"
       >
         <MessageCircle className="w-6 h-6" />
       </Button>
