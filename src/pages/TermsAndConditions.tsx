@@ -63,21 +63,15 @@ const TermsAndConditions = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Cancellation by Customer</h4>
                   <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                    <li>More than 7 days before travel: 10% cancellation charges</li>
-                    <li>3-7 days before travel: 25% cancellation charges</li>
-                    <li>1-2 days before travel: 50% cancellation charges</li>
-                    <li>Same day cancellation: 100% cancellation charges</li>
+                    <li>You may cancel the booking 21 day before the time of journey, with 50% cancellation charges for all services. In case cancellation or shorting of the trip is requested within 24 hours of the pick-up time, then the following rules will apply:</li>
+                    <li>Multi-Day Trip: NO refunds</li>
+                    <li>Single Day trip/ Airport transfer: No Refund will be issued to the Guest</li>
+                    <li>Airport transfer: No Refund will be issued to the Guest.</li>
+                    <li>If you are eligible for refunds based on the "Cancellation and Returns" policy above, then the refund will be remitted back to you in 5-7 working days</li>
                   </ul>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">Cancellation by Company</h4>
-                  <p className="text-muted-foreground">
-                    In case of cancellation due to unforeseen circumstances, natural disasters, or vehicle breakdown, 
-                    we will provide a full refund or arrange alternative transportation at no extra cost.
-                  </p>
-                </div>
+                
               </CardContent>
             </Card>
 
