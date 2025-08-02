@@ -30,7 +30,7 @@ export const TourCard = ({
 }: TourCardProps) => {
   const handleInquiry = () => {
     const message = `Hi Team, I am interested for ${name}`;
-    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919394939500?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
