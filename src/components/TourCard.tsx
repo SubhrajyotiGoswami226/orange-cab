@@ -31,6 +31,7 @@ export const TourCard = ({
   const handleInquiry = () => {
     const message = `Hi Team, I am interested for ${name}`;
     const whatsappUrl = `https://wa.me/919394939500?text=${encodeURIComponent(message)}`;
+    console.log("WhatsApp Link:", whatsappUrl);
     window.open(whatsappUrl, '_blank');
   };
 
