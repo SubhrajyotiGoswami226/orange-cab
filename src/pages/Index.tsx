@@ -65,10 +65,18 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Outstation Cab
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
               Planning for Meghalaya Arunachal Nagaland Assam Outstation holidays?<br />
               Contact us for rates and a complimentary itinerary assistance.
             </p>
+            <a
+              href={`https://wa.me/919394939500?text=${encodeURIComponent("Hi Team, I am interested for Outstation Cab")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors"
+            >
+              Book Now
+            </a>
           </div>
         </div>
       </section>
