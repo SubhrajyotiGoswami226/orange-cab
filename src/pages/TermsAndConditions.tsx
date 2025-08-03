@@ -187,6 +187,81 @@ const TermsAndConditions = () => {
               </CardContent>
             </Card>
 
+            {/* Airport Cabs */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl text-primary">Airport Cabs</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                    <li>Anywhere in Guwahati to Guwahati LGBI International Airport Drop up-to 40kms limits after extra per Kms Rs 25/- All Sedan Cabs… Rs 40/- All SUV Cabs</li>
+                    <li>Guwahati LGBI International Airport to anywhere drop in Guwahati up-to 40kms limits after extra per Kms Rs 25/- All Sedan Cabs… Rs 40/- All SUV Cabs</li>
+                    <li>Cab should not be divert for other multiple pick Up & extra drop</li>
+                    <li>After the payment of 50% amount, booking will be confirmed</li>
+                    <li>100% payment needs to get paid when you receive the cab</li>
+                    <li>No waiting on the journey</li>
+                    <li>Toll and Parking fee extra (as per applicable) should be borne by customer</li>
+                    <li>All disputes are subject to Guwahati jurisdiction</li>
+                    <li>Vehicles rented should not be used for any illegal activities as per Law</li>
+                    <li>Pets are not allowed the inside the cab</li>
+                    <li>We are not responsible for any loss of your luggage & valuable things</li>
+                    <li>Any misfortune / breakdown of vehicle due to natural calamities or manufacturing defect as per regular vehicle conditional breakdown shall have to Borne by vehicle vendor and guest cooperation is mandatory.</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Local Taxi */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl text-primary">Local Taxi</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                    <li>All local usage (with in Guwahati city limit only) in case, if it is more than 8 hrs 80 Kms extra payment as to made according to extra Kms & hours</li>
+                    <li>Toll and Parking fee extra (as per applicable) should be borne by customer if not inclusive under the package.</li>
+                    <li>100% payment needs to get paid when you receive the cab.</li>
+                    <li>For local trips extra driver's holding applicable 500/- before 6.00 a.m. After 09.00 PM hours</li>
+                    <li>After the payment of 50% amount, booking will be confirmed</li>
+                    <li>Final rental amount will be calculated based on total mileage and distance from Guest pickup location to Guest drop off location</li>
+                    <li>All disputes are subject to Guwahati jurisdiction</li>
+                    <li>Vehicles rented should not be used for any illegal activities as per Law</li>
+                    <li>Pets are not allowed the inside the cab</li>
+                    <li>We are not responsible for any loss of your luggage & valuable things</li>
+                    <li>Any misfortune / breakdown of vehicle due to natural calamities or manufacturing defect as per regular vehicle conditional breakdown shall have to Borne by vehicle vendor and guest cooperation is mandatory.</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Outstation Taxi */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-xl text-primary">Outstation Taxi</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                    <li>100% payment needs to get paid when you receive the cab.</li>
+                    <li>Toll and Parking Fee, Inter-State Permit charges extra should be borne by customer if not included under total cost.</li>
+                    <li>All Outstation Service Driver Bata is Rs 400/- applicable from 6-00AM To 09-00PM</li>
+                    <li>All Outstation Service Before 06.00AM and after 09.00PM Driver Bata is additional Rs 400/-</li>
+                    <li>Guests are requested to plan their time for the itinerary of the day, driver will not be responsible for any inability to cover all the items on the itinerary due to delays / extra time spent in any place visited</li>
+                    <li>After the payment of 50% amount, booking will be confirmed</li>
+                    <li>Vehicles rented for the purpose of outstation services cannot be used on local trips</li>
+                    <li>Pets are not allowed inside the cab</li>
+                    <li>Final rental amount will be calculated based on total mileage and distance from our Guest pickup location to Guest drop off location</li>
+                    <li>All disputes are subject to Guwahati jurisdiction</li>
+                    <li>Vehicles rented should not be used for any illegal activities as per Law</li>
+                    <li>We are not responsible for any loss of your luggage & valuable things</li>
+                    <li>Any misfortune / breakdown of vehicle due to natural calamities or manufacturing defect as per regular vehicle conditional breakdown shall have to Borne by vehicle vendor and guest cooperation is mandatory.</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Agreement */}
             <Card className="bg-muted/30">
               <CardContent className="p-6">
