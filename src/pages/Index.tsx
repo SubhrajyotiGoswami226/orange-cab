@@ -58,6 +58,21 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Outstation Cab Section */}
+      <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Outstation Cab
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              Planning for Meghalaya Arunachal Nagaland Assam Outstation holidays?<br />
+              Contact us for rates and a complimentary itinerary assistance.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
