@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { ServiceCard } from '@/components/ServiceCard';
@@ -142,6 +143,11 @@ const Index = () => {
             <p className="text-background/80 mb-4">
               Your trusted partner for comfortable and reliable transportation in Northeast India
             </p>
+            <div className="mb-4">
+              <Link to="/terms-and-conditions" className="text-background/80 hover:text-background underline">
+                Terms & Conditions
+              </Link>
+            </div>
             <p className="text-background/60 text-sm">
               © 2024 Orange Cabs. All rights reserved.
             </p>
