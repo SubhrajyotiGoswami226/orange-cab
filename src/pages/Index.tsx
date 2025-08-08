@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { ServiceCard } from '@/components/ServiceCard';
@@ -40,14 +41,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {data.cityServices.title}
+              City Cab Rentals in Guwahati – Comfort Meets Convenience
             </h2>
-            <p className="text-xl text-muted-foreground">
-              {data.cityServices.subtitle}
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Choose the perfect ride for your city journeys, tailored to your needs
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {data.cityServices.services.map((service) => (
               <ServiceCard
                 key={service.id}
@@ -55,6 +56,12 @@ const Index = () => {
                 className="animate-fade-in"
               />
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button variant="ghost" className="text-primary hover:text-primary/80">
+              View all →
+            </Button>
           </div>
         </div>
       </section>
@@ -83,18 +90,18 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Why Choose Orange Cabs?
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Experience the difference with our premium service
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {data.features.map((feature, index) => (
               <FeatureCard
                 key={index}
@@ -111,21 +118,28 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {data.outstationServices.title}
+              Popular Outstation Tours
             </h2>
-            <p className="text-xl text-muted-foreground">
-              {data.outstationServices.subtitle}
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore the beautiful Northeast India
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {data.outstationServices.tours.map((tour) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {data.outstationServices.tours.slice(0, 3).map((tour) => (
               <TourCard
                 key={tour.id}
                 {...tour}
+                name="5-Day Meghalaya Escape"
                 className="animate-fade-in"
               />
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button variant="ghost" className="text-primary hover:text-primary/80">
+              View all →
+            </Button>
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight, Star, Users } from 'lucide-react';
 import { images } from '@/utils/imageImports';
 
 interface CTAButton {
@@ -25,7 +25,7 @@ export const Hero = ({ title, subtitle, description, ctaButtons }: HeroProps) =>
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-start overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -38,53 +38,46 @@ export const Hero = ({ title, subtitle, description, ctaButtons }: HeroProps) =>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+        <div className="max-w-2xl">
+          {/* Trust Badge */}
+          <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 rounded-full glass-effect border border-white/20">
+            <span className="text-lg font-semibold text-white">4.7</span>
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <span className="text-sm text-white">Trusted by 500+ Happy Riders</span>
+            <div className="flex -space-x-2">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="w-6 h-6 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 border-2 border-white flex items-center justify-center text-xs font-medium">
+                  <Users className="w-3 h-3 text-white" />
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Main Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-slide-up">
-            {title}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Premium Cab Services{' '}
+            <span className="italic text-orange-300">in Guwahati</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 animate-slide-up animation-delay-200">
-            {subtitle}
-          </p>
-
           {/* Description */}
-          <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto animate-slide-up animation-delay-400">
-            {description}
+          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-xl leading-relaxed">
+            Experience luxury, comfort, and reliability with Orange Cabs
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up animation-delay-600">
-            {ctaButtons.map((button, index) => (
-              <Button
-                key={index}
-                onClick={() => handleAction(button.action)}
-                variant={button.primary ? "default" : "outline"}
-                size="lg"
-                className={
-                  button.primary
-                    ? "gradient-primary hover:shadow-hover transition-elegant text-lg px-8 py-6"
-                    : "bg-white/10 text-white border-white/20 hover:bg-white/20 transition-elegant text-lg px-8 py-6"
-                }
-              >
-                {button.action === 'call' ? (
-                  <Phone className="w-5 h-5 mr-2" />
-                ) : (
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                )}
-                {button.text}
-              </Button>
-            ))}
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="mt-16 animate-float">
-          <div className="w-6 h-10 border-2 border-white/80 rounded-full flex justify-center bg-white/10 backdrop-blur-sm shadow-lg mx-auto">
-            <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-pulse" />
-          </div>
+          {/* CTA Button */}
+          <Button
+            onClick={() => handleAction('book')}
+            size="lg"
+            className="gradient-primary hover:shadow-hover hover:-translate-y-1 text-white border-0 min-w-[200px] h-14 text-lg font-medium transition-elegant"
+          >
+            Book Now
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </div>
     </section>
