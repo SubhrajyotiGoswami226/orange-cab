@@ -108,7 +108,7 @@
         "name": "Ertiga Cabs",
         "price": "₹4000",
         "period": "per day",
-        "image": "/src/assets/swift-dzire.jpg",
+        "image": "/ertiga.jpg",
         "rating": 5,
         "features": [
           "7-seater family car",
@@ -124,7 +124,7 @@
         "name": "Creta Cabs",
         "price": "₹4000",
         "period": "per day",
-        "image": "/src/assets/innova-crysta.jpg",
+        "image": "/creta.jpg",
         "rating": 5,
         "features": [
           "Premium SUV comfort",
