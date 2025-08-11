@@ -112,15 +112,8 @@ export const ServiceCard = ({
           ))}
         </div>
 
-        {/* Spacer so Note aligns */}
+        {/* Spacer so price/button aligns at bottom */}
         <div className="flex-grow"></div>
-
-        {/* Note */}
-        {limits && (
-          <div className="text-xs text-white/70 mb-4 p-2 bg-white/5 rounded">
-            <strong>Note:</strong> {limits}
-          </div>
-        )}
 
         {/* Price + Button */}
         <div className="mt-auto">
