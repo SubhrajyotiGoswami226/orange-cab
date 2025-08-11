@@ -71,7 +71,8 @@
   }
 
   .dark {
-    --background: 24 8% 8%;
+    --background: 30 6% 8%; /* fallback HSL */
+   /* optional extra variable */
     --foreground: 25 5% 95%;
 
     --card: 24 8% 10%;
@@ -121,8 +122,11 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  :root {
+    --background: 25 6% 8%; /* HSL equivalent of #161413 */
+    --foreground: 0 0% 100%;
+    
+    
   }
 
   body {

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Star, Users } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 import { images } from '@/utils/imageImports';
+import React from 'react';
 
 interface CTAButton {
   text: string;
@@ -9,13 +10,13 @@ interface CTAButton {
 }
 
 interface HeroProps {
-  title: string;
-  subtitle: string;
-  description: string;
-  ctaButtons: CTAButton[];
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  ctaButtons?: CTAButton[];
 }
 
-export const Hero = ({ title, subtitle, description, ctaButtons }: HeroProps) => {
+export const Hero: React.FC<HeroProps> = () => {
   const handleAction = (action: string) => {
     if (action === 'book') {
       window.open('https://wa.link/bg5sy0', '_blank');
@@ -25,51 +26,41 @@ export const Hero = ({ title, subtitle, description, ctaButtons }: HeroProps) =>
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-start overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Full background */}
       <div className="absolute inset-0 z-0">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('${images.hero}')`
-          }}
+          style={{ backgroundImage: `url('${images.hero}')` }}
         />
         <div className="absolute inset-0 gradient-hero" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+      {/* Page container with equal side spacing */}
+      <div className="relative z-10 w-full max-w-[1280px] mx-auto px-6 lg:px-8">
         <div className="max-w-2xl">
           {/* Trust Badge */}
-          <div className="inline-flex items-center gap-3 mb-8 px-6 py-3 rounded-full glass-effect border border-white/20">
+          <div className="inline-flex items-center gap-3 mb-8 px-5 py-2 rounded-full bg-black/65 backdrop-blur-sm border border-white/10">
             <span className="text-lg font-semibold text-white">4.7</span>
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-sm text-white">Trusted by 500+ Happy Riders</span>
-            <div className="flex -space-x-2">
-              {[...Array(3)].map((_, i) => (
-                <div key={i} className="w-6 h-6 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 border-2 border-white flex items-center justify-center text-xs font-medium">
-                  <Users className="w-3 h-3 text-white" />
-                </div>
-              ))}
-            </div>
+            <span className="text-sm text-white/90">Trusted by 500+ Happy Riders</span>
           </div>
 
-          {/* Main Title */}
+          {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Premium Cab Services{' '}
-            <span className="italic text-orange-300">in Guwahati</span>
+            Premium Cab Services <span className="italic text-orange-300">in Guwahati</span>
           </h1>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-xl leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed">
             Experience luxury, comfort, and reliability with Orange Cabs
           </p>
 
-          {/* CTA Button */}
+          {/* CTA */}
           <Button
             onClick={() => handleAction('book')}
             size="lg"

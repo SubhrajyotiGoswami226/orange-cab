@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import UrbaniaBooking from "./pages/UrbaniaBooking";
 import TermsAndConditions from './pages/TermsAndConditions';
+import { ServiceCard } from "./components/ServiceCard";
 
 const queryClient = new QueryClient();
 
@@ -16,13 +17,17 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/urbania-booking" element={<UrbaniaBooking />} />
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        {/* Global wrapper with equal side spacing */}
+        <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/urbania-booking" element={<UrbaniaBooking />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+    
+           {/* Catch-all */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

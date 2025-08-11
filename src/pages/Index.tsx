@@ -5,10 +5,11 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { ServiceCard } from '@/components/ServiceCard';
 import { TourCard } from '@/components/TourCard';
-import { FeatureCard } from '@/components/FeatureCard';
+// removed FeatureCard import (we render features inline now)
 import { ContactSection } from '@/components/ContactSection';
 import FloatingActions from '@/components/FloatingActions';
 import servicesData from '@/data/services.json';
+import featuresJson from '@/data/features.json'; // NEW: feature images data
 
 const Index = () => {
   const [data, setData] = useState(servicesData);
@@ -59,7 +60,7 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button variant="ghost" className="text-primary hover:text-primary/80">
+            <Button variant="ghost" className="text-white hover:text-white/80">
               View all →
             </Button>
           </div>
@@ -89,8 +90,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-background">
+      {/* Features Section (inline cards with image-in-circle) */}
+      <section className="py-20 bg-background" id='features'>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -102,12 +103,23 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {data.features.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                {...feature}
-                className="animate-fade-in"
-              />
+            {featuresJson.map((feature, idx) => (
+              <div key={idx} className="text-center animate-fade-in">
+                {/* Bigger circle with gradient + contained image */}
+                <div className="mx-auto mb-6 w-28 h-28 rounded-full bg-orange-500 overflow-hidden shadow-lg">
+  <img
+    src={feature.image}
+    alt={feature.title}
+    className="w-full h-full object-cover"
+  />
+</div>
+
+
+                <h3 className="text-lg font-semibold mb-2 text-white">{feature.title}</h3>
+                <p className="text-sm text-white/80 max-w-xs mx-auto">
+                  {feature.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -137,7 +149,7 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button variant="ghost" className="text-primary hover:text-primary/80">
+            <Button variant="ghost" className="text-white hover:text-white/80">
               View all →
             </Button>
           </div>

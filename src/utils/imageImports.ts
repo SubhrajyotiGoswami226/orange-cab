@@ -1,5 +1,5 @@
 // Image imports for proper bundling
-import heroImage from '@/assets/hero-bg.jpg';
+import heroImage from '@/assets/newhero.png';
 import swiftDzire from '@/assets/swift-dzire.jpg';
 import innovaCrysta from '@/assets/innova-crysta.jpg';
 import tempoTraveller from '@/assets/tempo-traveller.jpg';
