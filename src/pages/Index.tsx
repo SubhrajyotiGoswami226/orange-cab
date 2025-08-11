@@ -23,11 +23,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <Navbar 
-        logo={data.navigation.logo}
-        items={data.navigation.items}
-        ctaButton={data.navigation.ctaButton}
-      />
+      <Navbar />
 
       {/* Hero Section */}
       <Hero 
@@ -142,7 +138,7 @@ const Index = () => {
               <TourCard
                 key={tour.id}
                 {...tour}
-                name="5-Day Meghalaya Escape"
+                name="2-Day Kaziranga Tour"
                 className="animate-fade-in"
               />
             ))}
