@@ -21,6 +21,7 @@ const App = () => (
         <div className="max-w-[1400px] mx-auto px-4 lg:px-6">
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/urbania-rental-in-guwahati" element={<Index />} />
             <Route path="/urbania-booking" element={<UrbaniaBooking />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
     
