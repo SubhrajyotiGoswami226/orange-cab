@@ -45,7 +45,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.cityServices.services.map((service) => (
               <ServiceCard
                 key={service.id}
@@ -63,97 +63,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Ertiga Cabs Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-500/10 to-orange-600/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ertiga Cab Rental in Guwahati
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Spacious and comfortable Ertiga cabs for your family trips and group travels
-            </p>
-          </div>
-
-          <div className="flex justify-center">
-            <ServiceCard
-              id="ertiga_cab"
-              name="Ertiga Cabs"
-              price="₹4000"
-              period="per day"
-              image="/src/assets/swift-dzire.jpg"
-              rating={5}
-              features={[
-                "7-seater family car",
-                "Car charges included",
-                "Fuel included",
-                "Driver charges included",
-                "Driver food & lodging included"
-              ]}
-              className="animate-fade-in max-w-sm"
-            />
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button 
-              onClick={() => {
-                const message = `Hi Team, I am interested for Ertiga Cabs`;
-                const whatsappUrl = `https://wa.me/919394939500?text=${encodeURIComponent(message)}`;
-                window.open(whatsappUrl, '_blank');
-              }}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg"
-            >
-              Book Ertiga Now
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Creta Cabs Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-500/10 to-blue-600/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Creta Cab Rental in Guwahati
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Premium SUV experience with Creta cabs for your outstation and city travels
-            </p>
-          </div>
-
-          <div className="flex justify-center">
-            <ServiceCard
-              id="creta_cab"
-              name="Creta Cabs"
-              price="₹4000"
-              period="per day"
-              image="/src/assets/innova-crysta.jpg"
-              rating={5}
-              features={[
-                "Premium SUV comfort",
-                "Car charges included",
-                "Fuel included",
-                "Driver charges included",
-                "Driver food & lodging included"
-              ]}
-              className="animate-fade-in max-w-sm"
-            />
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button 
-              onClick={() => {
-                const message = `Hi Team, I am interested for Creta Cabs`;
-                const whatsappUrl = `https://wa.me/919394939500?text=${encodeURIComponent(message)}`;
-                window.open(whatsappUrl, '_blank');
-              }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg"
-            >
-              Book Creta Now
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Outstation Cab Section */}
       <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/20">

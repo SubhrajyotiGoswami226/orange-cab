@@ -102,6 +102,38 @@
         ],
         "limits": "80km and 8 hours limit applicable",
         "popular": false
+      },
+      {
+        "id": "ertiga_cab",
+        "name": "Ertiga Cabs",
+        "price": "₹4000",
+        "period": "per day",
+        "image": "/src/assets/swift-dzire.jpg",
+        "rating": 5,
+        "features": [
+          "7-seater family car",
+          "Car charges included",
+          "Fuel included",
+          "Driver charges included",
+          "Driver food & lodging included"
+        ],
+        "popular": false
+      },
+      {
+        "id": "creta_cab", 
+        "name": "Creta Cabs",
+        "price": "₹4000",
+        "period": "per day",
+        "image": "/src/assets/innova-crysta.jpg",
+        "rating": 5,
+        "features": [
+          "Premium SUV comfort",
+          "Car charges included",
+          "Fuel included", 
+          "Driver charges included",
+          "Driver food & lodging included"
+        ],
+        "popular": false
       }
     ]
   },
