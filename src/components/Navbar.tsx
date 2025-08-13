@@ -24,7 +24,13 @@ export const Navbar = () => {
   ];
 
   const handleCTA = () => {
-    window.location.href = "/contact";
+    if (location.pathname !== "/") {
+      // If on another page, go to home first then scroll to contact
+      window.location.href = "/#contact";
+    } else {
+      // Scroll to contact section
+      scrollToSection("contact");
+    }
   };
 
   const scrollToSection = (id: string) => {
@@ -74,10 +80,9 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              onClick={() => window.open('tel:+919394939500', '_self')}
+              onClick={handleCTA}
               variant="default"
               className="flex items-center bg-white gap-2"
             >
