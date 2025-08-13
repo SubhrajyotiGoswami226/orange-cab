@@ -134,22 +134,14 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.outstationServices.tours.slice(0, 3).map((tour, index) => {
-              const tourNames = [
-                "5-Day Meghalaya Tour",
-                "Kaziranga Safari Tour", 
-                "6 Days Tawang Monastery Tour"
-              ];
-              return (
-                <TourCard
-                  key={tour.id}
-                  {...tour}
-                  name={tourNames[index]}
-                  className="animate-fade-in"
-                />
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            {data.outstationServices.tours.map((tour) => (
+              <TourCard
+                key={tour.id}
+                {...tour}
+                className="animate-fade-in"
+              />
+            ))}
           </div>
           
           <div className="text-center mt-12">
