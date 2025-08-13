@@ -43,6 +43,8 @@
         "period": "per day",
         "image": "/src/assets/swift-dzire.jpg",
         "rating": 5,
+        "seats": 4,
+        "bags": 2,
         "features": [
           "Car charges included",
           "Fuel included",
@@ -59,6 +61,8 @@
         "period": "per day",
         "image": "/src/assets/innova-crysta.jpg",
         "rating": 5,
+        "seats": 7,
+        "bags": 6,
         "features": [
           "7 seats, 6 bags capacity",
           "Car charges included",
@@ -76,6 +80,8 @@
         "period": "per day",
         "image": "/src/assets/tempo-traveller.jpg",
         "rating": 5,
+        "seats": "11-25",
+        "bags": 10,
         "features": [
           "11-25 seats, 10 bags capacity",
           "Car charges included",
@@ -93,6 +99,8 @@
         "period": "per day",
         "image": "/force-urbania1.jpg",
         "rating": 5,
+        "seats": 16,
+        "bags": 10,
         "features": [
           "16 seats, 10 bags capacity",
           "Car charges included",
@@ -110,6 +118,8 @@
         "period": "per day",
         "image": "/ertiga.jpg",
         "rating": 5,
+        "seats": 7,
+        "bags": 6,
         "features": [
           "7 seats, 6 bags capacity",
           "Car charges included",
@@ -126,6 +136,8 @@
         "period": "per day",
         "image": "/creta.jpg",
         "rating": 5,
+        "seats": 5,
+        "bags": 4,
         "features": [
           "Premium SUV comfort",
           "Car charges included",

@@ -13,6 +13,8 @@ interface ServiceCardProps {
   period: string;
   image: string;
   rating: number;
+  seats: number | string;
+  bags: number;
   features: string[];
   limits?: string;
   popular?: boolean;
@@ -26,6 +28,8 @@ export const ServiceCard = ({
   period,
   image,
   rating,
+  seats,
+  bags,
   features,
   limits,
   popular = false,
@@ -93,10 +97,10 @@ export const ServiceCard = ({
         {/* Seats & Bags */}
         <div className="flex items-center gap-4 text-[11px] text-white/80 mb-3">
           <span className="flex items-center gap-1">
-            <Users className="w-3 h-3 text-white" /> 4 Seats
+            <Users className="w-3 h-3 text-white" /> {seats} Seats
           </span>
           <span className="flex items-center gap-1">
-            <Luggage className="w-3 h-3 text-white" /> 2 Bags
+            <Luggage className="w-3 h-3 text-white" /> {bags} Bags
           </span>
         </div>
 
