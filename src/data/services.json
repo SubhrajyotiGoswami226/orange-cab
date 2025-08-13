@@ -64,7 +64,6 @@
         "seats": 7,
         "bags": 6,
         "features": [
-          "7 seats, 6 bags capacity",
           "Car charges included",
           "Fuel included",
           "Driver charges included",
@@ -83,7 +82,6 @@
         "seats": "11-25",
         "bags": 10,
         "features": [
-          "11-25 seats, 10 bags capacity",
           "Car charges included",
           "Fuel included",
           "Driver charges included",
@@ -102,7 +100,6 @@
         "seats": 16,
         "bags": 10,
         "features": [
-          "16 seats, 10 bags capacity",
           "Car charges included",
           "Fuel included",
           "Driver charges included",
@@ -121,7 +118,6 @@
         "seats": 7,
         "bags": 6,
         "features": [
-          "7 seats, 6 bags capacity",
           "Car charges included",
           "Fuel included",
           "Driver charges included",
