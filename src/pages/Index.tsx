@@ -11,8 +11,11 @@ import FloatingActions from '@/components/FloatingActions';
 import servicesData from '@/data/services.json';
 import featuresJson from '@/data/features.json'; // NEW: feature images data
 
+
+
 const Index = () => {
   const [data, setData] = useState(servicesData);
+  const [showAllTours, setShowAllTours] = useState(false);
 
   useEffect(() => {
     // In a real app, you'd fetch this from an API
@@ -34,35 +37,38 @@ const Index = () => {
       />
 
       {/* City Services Section */}
-      <section id="services" className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              City Cab Rentals in Guwahati – Comfort Meets Convenience
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Choose the perfect ride for your city journeys, tailored to your needs
-            </p>
-          </div>
+<section id="services" className="py-20 bg-background">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        {data.cityServices.title}
+      </h2>
+      <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+        {data.cityServices.subtitle}
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.cityServices.services.map((service) => (
-              <ServiceCard
-                key={service.id}
-                {...service}
-                className="animate-fade-in"
-              />
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Button variant="ghost" className="text-white hover:text-white/80">
-              View all →
-            </Button>
-          </div>
-        </div>
-      </section>
+    {/* Show only first 3 cards */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {data.cityServices.services.slice(0, 3).map((service) => (
+        <ServiceCard
+          key={service.id}
+          {...service}
+          className="animate-fade-in"
+        />
+      ))}
+    </div>
 
+    {/* View all button */}
+    <div className="text-center mt-12">
+      <Link to="/cab-booking">
+        <Button variant="ghost" className="text-white hover:text-white/80">
+          View all →
+        </Button>
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* Outstation Cab Section */}
       <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/20">
@@ -122,7 +128,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Tours Section */}
+           {/* Tours Section */}
       <section id="tours" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -134,8 +140,12 @@ const Index = () => {
             </p>
           </div>
 
+          {/* Show first 3 tours, toggle view all */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {data.outstationServices.tours.map((tour) => (
+            {(showAllTours 
+              ? data.outstationServices.tours 
+              : data.outstationServices.tours.slice(0, 3)
+            ).map((tour) => (
               <TourCard
                 key={tour.id}
                 {...tour}
@@ -144,38 +154,100 @@ const Index = () => {
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <Button variant="ghost" className="text-white hover:text-white/80">
-              View all →
-            </Button>
-          </div>
+          {/* View all button */}
+          {data.outstationServices.tours.length > 3 && (
+            <div className="text-center mt-12">
+              <Button 
+                variant="ghost" 
+                className="text-white hover:text-white/80"
+                onClick={() => setShowAllTours(!showAllTours)}
+              >
+                {showAllTours ? "Show Less ↑" : "View All →"}
+              </Button>
+            </div>
+          )}
         </div>
       </section>
+
 
       {/* Contact Section */}
       <ContactSection {...data.contact} />
 
       {/* Footer */}
-      <footer className="bg-foreground text-background py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4 gradient-primary bg-clip-text text-transparent">
-              Orange Cabs
-            </h3>
-            <p className="text-background/80 mb-4">
-              Your trusted partner for comfortable and reliable transportation in Northeast India
-            </p>
-            <div className="mb-4">
-              <Link to="/terms-and-conditions" className="text-background/80 hover:text-background underline">
-                Terms & Conditions
-              </Link>
-            </div>
-            <p className="text-background/60 text-sm">
-              © 2024 Orange Cabs. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+<footer className="bg-black text-white py-12">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:justify-between gap-10">
+    
+    {/* Left Section - Logo + Description + Social */}
+    <div className="md:w-1/2">
+      <h3 className="text-2xl font-bold mb-4">
+        <span className="text-orange-500">Orange</span>
+        <span className="text-white">Cab</span>
+      </h3>
+      <p className="text-gray-400 text-sm mb-6 max-w-sm">
+        Delivering safe, reliable, and premium cab services across Guwahati and the Northeast. 
+        From city rides to curated outstation tours, we make every journey comfortable and hassle-free.
+      </p>
+
+      {/* Follow Us */}
+      <h4 className="text-sm font-semibold mb-3">Follow Us</h4>
+      <div className="flex space-x-4 text-lg">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500">
+          <i className="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500">
+          <i className="fab fa-instagram"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500">
+          <i className="fab fa-twitter"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500">
+          <i className="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+
+    {/* Right Section - Links in 3 Columns */}
+    <div className="flex flex-col sm:flex-row sm:gap-12 md:gap-16">
+      {/* About */}
+      <div>
+        <h4 className="text-lg font-semibold mb-4">About</h4>
+        <ul className="space-y-2 text-gray-400 text-sm">
+          <li><a href="#about" className="hover:text-orange-500">Our Story</a></li>
+          <li><a href="#services" className="hover:text-orange-500">Services</a></li>
+          <li><a href="#fleet" className="hover:text-orange-500">Fleet</a></li>
+          <li><a href="#tours" className="hover:text-orange-500">Tours</a></li>
+        </ul>
+      </div>
+
+      {/* Bookings */}
+      <div>
+        <h4 className="text-lg font-semibold mb-4">Bookings</h4>
+        <ul className="space-y-2 text-gray-400 text-sm">
+          <li><a href="#cab" className="hover:text-orange-500">City Cab Booking</a></li>
+          <li><a href="#outstation" className="hover:text-orange-500">Outstation Cab Booking</a></li>
+          <li><a href="#tours" className="hover:text-orange-500">Tour Packages</a></li>
+          <li><a href="#faq" className="hover:text-orange-500">Finance FAQ</a></li>
+        </ul>
+      </div>
+
+      {/* Support */}
+      <div>
+        <h4 className="text-lg font-semibold mb-4">Support</h4>
+        <ul className="space-y-2 text-gray-400 text-sm">
+          <li><a href="/contact" className="hover:text-orange-500">Contact Us</a></li>
+          <li><Link to="/terms-and-conditions" className="hover:text-orange-500">Terms & Conditions</Link></li>
+          <li><a href="/privacy-policy" className="hover:text-orange-500">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  {/* Bottom Bar */}
+  <div className="mt-8 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+    © 2025 Orange Cab. All rights reserved.
+  </div>
+</footer>
+
 
       {/* Floating Action Buttons */}
       <FloatingActions />
