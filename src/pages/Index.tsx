@@ -48,24 +48,14 @@ const Index = () => {
       </p>
     </div>
 
-    {/* Show only first 3 cards */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {data.cityServices.services.slice(0, 3).map((service) => (
+      {data.cityServices.services.map((service) => (
         <ServiceCard
           key={service.id}
           {...service}
           className="animate-fade-in"
         />
       ))}
-    </div>
-
-    {/* View all button */}
-    <div className="text-center mt-12">
-      <Link to="/cab-booking">
-        <Button variant="ghost" className="text-white hover:text-white/80">
-          View all →
-        </Button>
-      </Link>
     </div>
   </div>
 </section>
