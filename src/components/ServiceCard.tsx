@@ -41,9 +41,7 @@ export const ServiceCard = ({
     if (id === 'force_urbania') {
       navigate('/urbania-booking');
     } else {
-      const message = `Hi Team, I am interested for ${name}`;
-      const whatsappUrl = `https://wa.me/919394939500?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, '_blank');
+      navigate(`/service/${id}`);
     }
   };
 

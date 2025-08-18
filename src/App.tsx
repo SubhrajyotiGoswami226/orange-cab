@@ -9,6 +9,8 @@ import UrbaniaBooking from "./pages/UrbaniaBooking";
 import TermsAndConditions from './pages/TermsAndConditions';
 import { ServiceCard } from "./components/ServiceCard";
 import CabBooking from '@/pages/CabBooking';
+import ServiceDetails from '@/pages/ServiceDetails';
+import TourDetails from '@/pages/TourDetails';
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,8 @@ const App = () => (
             <Route path="/urbania-rental-in-guwahati" element={<Index />} />
             <Route path="/urbania-booking" element={<UrbaniaBooking />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/service/:serviceId" element={<ServiceDetails />} />
+            <Route path="/tour/:tourId" element={<TourDetails />} />
     
            {/* Catch-all */}
             <Route path="*" element={<NotFound />} />

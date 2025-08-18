@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Star, Check, Heart, Edit } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getImageUrl } from '@/utils/imageImports';
+import { useNavigate } from 'react-router-dom';
 
 interface TourCardProps {
   id: string;
@@ -28,11 +29,10 @@ export const TourCard = ({
   popular = false,
   className
 }: TourCardProps) => {
+  const navigate = useNavigate();
+  
   const handleInquiry = () => {
-    const message = `Hi Team, I am interested for ${name}`;
-    const whatsappUrl = `https://wa.me/919394939500?text=${encodeURIComponent(message)}`;
-    console.log("WhatsApp Link:", whatsappUrl);
-    window.open(whatsappUrl, '_blank');
+    navigate(`/tour/${id}`);
   };
 
   return (
