@@ -39,7 +39,9 @@ export const ServiceCard = ({
 
   const handleBooking = () => {
     if (id === 'force_urbania') {
-      navigate('/urbania-booking');
+      navigate('/urbania-rental-in-guwahati');
+    } else if (id === 'tempo_traveller') {
+      navigate('/tempo-traveller-rental-in-guwahati');
     } else {
       navigate(`/service/${id}`);
     }

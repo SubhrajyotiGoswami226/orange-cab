@@ -2,20 +2,30 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Star, Users, Luggage, ArrowLeft, ExternalLink, Check } from 'lucide-react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import { getImageUrl } from '@/utils/imageImports';
 import { useEffect, useState } from 'react';
 import servicesData from '@/data/services.json';
 
 const ServiceDetails = () => {
   const { serviceId } = useParams();
+  const location = useLocation();
   const [service, setService] = useState<any>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    const foundService = servicesData.cityServices.services.find(s => s.id === serviceId);
+    
+    let foundService;
+    
+    // Handle SEO-friendly URLs
+    if (location.pathname === '/tempo-traveller-rental-in-guwahati') {
+      foundService = servicesData.cityServices.services.find(s => s.id === 'tempo_traveller');
+    } else {
+      foundService = servicesData.cityServices.services.find(s => s.id === serviceId);
+    }
+    
     setService(foundService);
-  }, [serviceId]);
+  }, [serviceId, location.pathname]);
 
   if (!service) {
     return (
