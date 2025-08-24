@@ -25,8 +25,12 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/cab-booking" element={<CabBooking />} />
+            <Route path="/city-cab-rental-in-guwahati" element={<ServiceDetails />} />
+            <Route path="/innova-cab-rental-in-guwahati" element={<ServiceDetails />} />
             <Route path="/urbania-rental-in-guwahati" element={<UrbaniaBooking />} />
             <Route path="/tempo-traveller-rental-in-guwahati" element={<ServiceDetails />} />
+            <Route path="/ertiga-cab-rental-in-guwahati" element={<ServiceDetails />} />
+            <Route path="/creta-cab-rental-in-guwahati" element={<ServiceDetails />} />
             <Route path="/urbania-booking" element={<UrbaniaBooking />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/service/:serviceId" element={<ServiceDetails />} />

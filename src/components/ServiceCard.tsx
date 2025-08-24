@@ -37,14 +37,22 @@ export const ServiceCard = ({
 }: ServiceCardProps) => {
   const navigate = useNavigate();
 
+  // SEO-friendly URL mapping
+  const getSEOUrl = (serviceId: string) => {
+    const seoUrls: { [key: string]: string } = {
+      'city_cab': '/city-cab-rental-in-guwahati',
+      'innova_cab': '/innova-cab-rental-in-guwahati',
+      'tempo_traveller': '/tempo-traveller-rental-in-guwahati',
+      'force_urbania': '/urbania-rental-in-guwahati',
+      'ertiga_cab': '/ertiga-cab-rental-in-guwahati',
+      'creta_cab': '/creta-cab-rental-in-guwahati'
+    };
+    
+    return seoUrls[serviceId] || `/service/${serviceId}`;
+  };
+
   const handleBooking = () => {
-    if (id === 'force_urbania') {
-      navigate('/urbania-rental-in-guwahati');
-    } else if (id === 'tempo_traveller') {
-      navigate('/tempo-traveller-rental-in-guwahati');
-    } else {
-      navigate(`/service/${id}`);
-    }
+    navigate(getSEOUrl(id));
   };
 
   return (

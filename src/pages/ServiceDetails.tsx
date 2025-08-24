@@ -18,7 +18,19 @@ const ServiceDetails = () => {
     let foundService;
     
     // Handle SEO-friendly URLs
-    if (location.pathname === '/tempo-traveller-rental-in-guwahati') {
+    const pathToServiceMap: { [key: string]: string } = {
+      '/city-cab-rental-in-guwahati': 'city_cab',
+      '/innova-cab-rental-in-guwahati': 'innova_cab',
+      '/tempo-traveller-rental-in-guwahati': 'tempo_traveller',
+      '/ertiga-cab-rental-in-guwahati': 'ertiga_cab',
+      '/creta-cab-rental-in-guwahati': 'creta_cab'
+    };
+    
+    const mappedServiceId = pathToServiceMap[location.pathname];
+    
+    if (mappedServiceId) {
+      foundService = servicesData.cityServices.services.find(s => s.id === mappedServiceId);
+    } else if (location.pathname === '/tempo-traveller-rental-in-guwahati') {
       foundService = servicesData.cityServices.services.find(s => s.id === 'tempo_traveller');
     } else {
       foundService = servicesData.cityServices.services.find(s => s.id === serviceId);
