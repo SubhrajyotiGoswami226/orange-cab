@@ -234,7 +234,8 @@
     {
       "icon": "Shield",
       "title": "Safe & Secure",
-      "description": "Experienced drivers and well-maintained vehicles for your safety"
+      "description": "Experienced drivers and well-maintained vehicles for your safety",
+      "image": "/safe_and_secure.jpg"
     },
     {
       "icon": "Clock",
