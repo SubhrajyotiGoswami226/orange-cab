@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Star, ArrowRight, Heart, Luggage, Users } from 'lucide-react';
+import { Star, ArrowRight, Heart, Luggage, Users, Shield, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { getImageUrl } from '@/utils/imageImports';
 import { useNavigate } from 'react-router-dom';
@@ -58,14 +58,14 @@ export const ServiceCard = ({
   return (
     <Card
       className={cn(
-        'group relative flex flex-col overflow-hidden hover:shadow-hover hover:-translate-y-1 bg-card border border-border/50 transition-elegant',
+        'group relative flex flex-col overflow-hidden hover:shadow-2xl hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50 border border-gray-200 transition-all duration-500 hover:border-orange-200',
         className
       )}
     >
       {/* Popular Badge */}
       {popular && (
         <div className="absolute top-3 left-3 z-10">
-          <Badge className="bg-orange-500 text-white border-0 px-3 py-1 text-xs font-medium rounded-full">
+          <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 px-3 py-1 text-xs font-bold rounded-full shadow-lg">
             Most Popular
           </Badge>
         </div>
@@ -73,51 +73,54 @@ export const ServiceCard = ({
 
       {/* Heart Icon */}
       <div className="absolute top-3 right-3 z-10">
-        <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-          <Heart className="w-4 h-4 text-white" />
+        <div className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center cursor-pointer hover:bg-white transition-all duration-300 shadow-md">
+          <Heart className="w-4 h-4 text-gray-600 hover:text-red-500 transition-colors" />
         </div>
       </div>
 
       {/* Service Image */}
-      <div className="relative h-48 overflow-hidden bg-muted">
+      <div className="relative h-56 overflow-hidden bg-gray-100">
         <img
           src={getImageUrl(image)}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      <CardContent className="flex flex-col flex-grow p-4">
+      <CardContent className="flex flex-col flex-grow p-6">
         {/* Name + Rating */}
         <div className="flex items-center justify-between mb-1">
-          <h3 className="text-lg font-semibold text-white">{name}</h3>
+          <h3 className="text-xl font-bold text-gray-900">{name}</h3>
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-3 h-3 ${i < rating ? 'fill-yellow-400 text-yellow-400' : 'text-white/30'}`}
+                className={`w-4 h-4 ${i < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
               />
             ))}
-            <span className="text-xs text-white/80">{rating.toFixed(1)}</span>
+            <span className="text-sm text-gray-600 font-medium ml-1">{rating.toFixed(1)}</span>
           </div>
         </div>
 
         {/* Seats & Bags */}
-        <div className="flex items-center gap-4 text-[11px] text-white/80 mb-3">
+        <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
           <span className="flex items-center gap-1">
-            <Users className="w-3 h-3 text-white" /> {seats} Seats
+            <Users className="w-4 h-4 text-orange-500" /> 
+            <span className="font-medium">{seats} Seats</span>
           </span>
           <span className="flex items-center gap-1">
-            <Luggage className="w-3 h-3 text-white" /> {bags} Bags
+            <Luggage className="w-4 h-4 text-orange-500" /> 
+            <span className="font-medium">{bags} Bags</span>
           </span>
         </div>
 
-        {/* Features in pill boxes */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        {/* Key Features */}
+        <div className="flex flex-wrap gap-2 mb-6">
           {features.map((feature, idx) => (
             <span
               key={idx}
-              className="px-2 py-1 bg-white/10 text-white text-xs rounded-full border border-white/20"
+              className="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded-full border border-orange-200"
             >
               {feature}
             </span>
@@ -129,14 +132,20 @@ export const ServiceCard = ({
 
         {/* Price + Button */}
         <div className="mt-auto">
-          <div className="mb-4">
-            <span className="text-2xl font-bold text-orange-500">{price}</span>
-            <span className="text-white/70 text-sm ml-1">/ {period}</span>
+          <div className="mb-4 flex items-baseline justify-between">
+            <div>
+              <span className="text-3xl font-bold text-orange-600">{price}</span>
+              <span className="text-gray-500 text-sm ml-1">/ {period}</span>
+            </div>
+            <div className="flex items-center gap-1 text-xs text-gray-500">
+              <Shield className="w-3 h-3" />
+              <span>Insured</span>
+            </div>
           </div>
           <Button
             onClick={handleBooking}
-            className="w-full bg-white text-orange-500 hover:bg-gray-100 border-0 transition-elegant rounded-lg"
-            size="sm"
+            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 transition-all duration-300 rounded-lg font-semibold shadow-md hover:shadow-lg hover:scale-105"
+            size="lg"
           >
             Book Now
             <ArrowRight className="ml-2 w-4 h-4" />

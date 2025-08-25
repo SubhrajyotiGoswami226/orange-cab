@@ -57,25 +57,26 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#161413] shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           
           {/* Logo */}
-          <Link to="/" className="flex items-center text-2xl font-bold">
+          <Link to="/" className="flex items-center text-2xl font-bold hover:scale-105 transition-transform duration-300">
             <span className="text-orange-500">Orange</span>
             <span className="text-white">Cab</span>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item)}
-                className="text-sm font-medium text-white hover:text-orange-500 transition-colors"
+                className="text-sm font-medium text-white hover:text-orange-400 transition-all duration-300 relative group py-2"
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </div>
@@ -84,7 +85,7 @@ export const Navbar = () => {
             <Button
               onClick={handleCTA}
               variant="default"
-              className="flex items-center bg-white gap-2"
+              className="flex items-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white gap-2 font-semibold px-6 transition-all duration-300 hover:scale-105 shadow-md"
             >
               <Phone className="w-4 h-4" />
               Contact Us
@@ -106,20 +107,21 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-2 space-y-1 bg-black p-4 rounded-lg">
+          <div className="md:hidden mt-2 space-y-1 bg-black/95 backdrop-blur-md p-6 rounded-lg border border-white/10 shadow-xl">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item)}
-                className="block text-white hover:text-orange-500 transition-colors py-2 w-full text-left"
+                className="block text-white hover:text-orange-400 transition-colors py-3 w-full text-left font-medium border-b border-white/10 last:border-b-0"
               >
                 {item.label}
               </button>
             ))}
             <Button
               onClick={handleCTA}
-              className="w-full bg-white text-black hover:bg-gray-200 mt-2"
+              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white mt-4 font-semibold"
             >
+              <Phone className="w-4 h-4 mr-2" />
               Contact Us
             </Button>
           </div>

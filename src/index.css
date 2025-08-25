@@ -6,49 +6,49 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 24 10% 10%;
+    --background: 0 0% 98%;
+    --foreground: 220 13% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 24 10% 10%;
+    --card-foreground: 220 13% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 24 10% 10%;
+    --popover-foreground: 220 13% 18%;
 
     /* Orange brand colors */
-    --primary: 25 95% 53%;
+    --primary: 24 95% 53%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 25 100% 45%;
-    --primary-light: 25 100% 65%;
+    --primary-dark: 24 100% 45%;
+    --primary-light: 24 100% 65%;
 
-    --secondary: 39 100% 50%;
+    --secondary: 39 100% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 25 5% 96%;
-    --muted-foreground: 25 5% 45%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 25 95% 53%;
+    --accent: 24 95% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 25 10% 90%;
-    --input: 25 10% 95%;
-    --ring: 25 95% 53%;
+    --border: 220 13% 91%;
+    --input: 220 13% 95%;
+    --ring: 24 95% 53%;
 
     /* Custom gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(135deg, hsla(0, 0%, 0%, 0.534), hsla(0, 0%, 0%, 0.5));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(25 5% 98%));
+    --gradient-primary: linear-gradient(135deg, hsl(24, 95%, 53%), hsl(39, 100%, 55%));
+    --gradient-hero: linear-gradient(135deg, hsla(0, 0%, 0%, 0.7), hsla(0, 0%, 0%, 0.4));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 98%));
     
     /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(25 95% 53% / 0.2);
-    --shadow-hover: 0 20px 40px -10px hsl(25 95% 53% / 0.3);
-    --shadow-glass: 0 8px 32px 0 hsl(25 95% 53% / 0.1);
+    --shadow-elegant: 0 10px 30px -10px hsl(24 95% 53% / 0.15);
+    --shadow-hover: 0 25px 50px -12px hsl(24 95% 53% / 0.25);
+    --shadow-glass: 0 8px 32px 0 hsl(24 95% 53% / 0.1);
     
     /* Animations */
-    --transition-elegant: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elegant: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;

@@ -37,23 +37,24 @@ const Index = () => {
       />
 
       {/* City Services Section */}
-<section id="services" className="py-20 bg-background">
+<section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
         {data.cityServices.title}
       </h2>
-      <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
         {data.cityServices.subtitle}
       </p>
+      <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mt-6 rounded-full"></div>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {data.cityServices.services.map((service) => (
         <ServiceCard
           key={service.id}
           {...service}
-          className="animate-fade-in"
+          className="animate-fade-in hover:shadow-2xl"
         />
       ))}
     </div>
@@ -61,13 +62,14 @@ const Index = () => {
 </section>
 
       {/* Outstation Cab Section */}
-      <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/20">
+      <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center relative z-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Outstation Cab
             </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+            <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10 leading-relaxed">
               Planning for Meghalaya Arunachal Nagaland Assam Outstation holidays?<br />
               Contact us for rates and a complimentary itinerary assistance.
             </p>
@@ -75,7 +77,7 @@ const Index = () => {
               href={`https://wa.me/919394939500?text=${encodeURIComponent("Hi Team, I am interested for Outstation Cab")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center px-10 py-4 border-2 border-white text-lg font-bold rounded-lg text-white bg-transparent hover:bg-white hover:text-orange-600 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Book Now
             </a>
@@ -84,32 +86,32 @@ const Index = () => {
       </section>
 
       {/* Features Section (inline cards with image-in-circle) */}
-      <section className="py-20 bg-background" id='features'>
+      <section className="py-20 bg-white" id='features'>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Orange Cabs?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Experience the difference with our premium service
             </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mt-6 rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuresJson.map((feature, idx) => (
-              <div key={idx} className="text-center animate-fade-in">
+              <div key={idx} className="text-center animate-fade-in group">
                 {/* Bigger circle with gradient + contained image */}
-                <div className="mx-auto mb-6 w-28 h-28 rounded-full bg-orange-500 overflow-hidden shadow-lg">
-  <img
-    src={feature.image}
-    alt={feature.title}
-    className="w-full h-full object-cover"
-  />
-</div>
+                <div className="mx-auto mb-6 w-32 h-32 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
 
-
-                <h3 className="text-lg font-semibold mb-2 text-white">{feature.title}</h3>
-                <p className="text-sm text-white/80 max-w-xs mx-auto">
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{feature.title}</h3>
+                <p className="text-gray-600 max-w-xs mx-auto leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -119,19 +121,20 @@ const Index = () => {
       </section>
 
            {/* Tours Section */}
-      <section id="tours" className="py-20 bg-background">
+      <section id="tours" className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Popular Outstation Tours
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Explore the beautiful Northeast India
             </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mt-6 rounded-full"></div>
           </div>
 
           {/* Show first 3 tours, toggle view all */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {(showAllTours 
               ? data.outstationServices.tours 
               : data.outstationServices.tours.slice(0, 3)
@@ -148,8 +151,8 @@ const Index = () => {
           {data.outstationServices.tours.length > 3 && (
             <div className="text-center mt-12">
               <Button 
-                variant="ghost" 
-                className="text-white hover:text-white/80"
+                variant="outline" 
+                className="text-gray-900 border-gray-300 hover:bg-orange-500 hover:text-white hover:border-orange-500 px-8 py-3 font-semibold transition-all duration-300"
                 onClick={() => setShowAllTours(!showAllTours)}
               >
                 {showAllTours ? "Show Less ↑" : "View All →"}
