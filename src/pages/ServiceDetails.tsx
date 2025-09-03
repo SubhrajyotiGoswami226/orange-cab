@@ -7,6 +7,27 @@ import { getImageUrl } from '@/utils/imageImports';
 import { useEffect, useState } from 'react';
 import servicesData from '@/data/services.json';
 
+const CityFAQItem = ({ question, answer }: { question: string; answer: string }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  return (
+    <div className="border-b border-border">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex justify-between items-center py-4 text-left hover:text-orange-500 transition-colors"
+      >
+        <span className="font-medium text-foreground hover:text-orange-500 transition-colors">{question}</span>
+        <span className="text-primary text-xl font-bold">
+          {isOpen ? "-" : "+"}
+        </span>
+      </button>
+      {isOpen && (
+        <p className="pb-4 text-muted-foreground">{answer}</p>
+      )}
+    </div>
+  );
+};
+
 const ServiceDetails = () => {
   const { serviceId } = useParams();
   const location = useLocation();
@@ -67,7 +88,7 @@ const ServiceDetails = () => {
     {
       icon: Luggage,
       title: `${service.bags} Bags Space`,
-      description: "Ample luggage space for your belongings"
+      description: "Sufficient luggage room for your Meghalaya tour essentials and shopping."
     }
   ];
 
@@ -175,6 +196,39 @@ const ServiceDetails = () => {
             </div>
           </CardContent>
         </Card>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid lg:grid-cols-3 gap-16">
+          <div>
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              FAQ
+            </h2>
+            <p className="text-muted-foreground">
+              Find quick answers to common questions
+            </p>
+          </div>
+          
+          <div className="lg:col-span-2 space-y-4">
+            <CityFAQItem 
+              question="Can I book a City Cab for a Guwahati to Shillong trip?"
+              answer="Yes, City Cab rentals are available for Guwahati to Shillong and extended Meghalaya trips."
+            />
+            <CityFAQItem 
+              question="Are fuel and driver charges included in the rental price?"
+              answer="Yes, fuel, driver charges, and even driver lodging are all included in the package."
+            />
+            <CityFAQItem 
+              question="Can I get pick-up from Guwahati Airport?"
+              answer="Yes, airport and railway station pick-up/drop services are available at no extra charge."
+            />
+            <CityFAQItem 
+              question="What places can I cover with this rental?"
+              answer="Popular routes include Guwahati–Shillong, Shillong–Cherrapunji, Dawki, Mawlynnong, Kaziranga, and other destinations across Meghalaya."
+            />
+          </div>
+        </div>
       </div>
 
       {/* CTA Section */}
