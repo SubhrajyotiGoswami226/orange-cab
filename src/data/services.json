@@ -46,12 +46,14 @@
         "seats": 4,
         "bags": 2,
         "features": [
-          "Car charges included",
-          "Fuel included",
+          "Car rental charges included",
           "Driver charges included",
-          "Driver food & lodging included"
+          "Fuel cost included",
+          "Driver food & lodging included",
+          "Clean, sanitized vehicle ready for travel",
+          "Pick-up from Guwahati Airport, Railway Station, or city hotels"
         ],
-        "limits": "80km and 8 hours limit applicable",
+        "limits": "80km and 8 hours  daily limit applicable",
         "popular": false
       },
       {
@@ -64,12 +66,14 @@
         "seats": 7,
         "bags": 6,
         "features": [
-          "Car charges included",
-          "Fuel included",
+          "Car rental charges included",
           "Driver charges included",
-          "Driver food & lodging included"
+          "Fuel cost included",
+          "Driver food & lodging included",
+          "Airport/railway pick-up and drop available",
+          "Clean, sanitized Innova ready for long journeys"
         ],
-        "limits": "80km and 8 hours limit applicable",
+        "limits": "80km and 8 hours daily limit applicable",
         "popular": true
       },
       {
