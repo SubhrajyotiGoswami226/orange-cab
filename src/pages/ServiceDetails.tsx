@@ -517,7 +517,7 @@ const ServiceDetails = () => {
 
             <p className="text-muted-foreground leading-relaxed">
               {service.id === 'tempo_traveller' ? (
-                "Planning a Meghalaya trip with family, friends, or colleagues? Our spacious Tempo Travellers are the best choice for group tours from Guwahati to Shillong, Cherrapunji, Dawki, Kaziranga, and more. Travel comfortably with experienced drivers, clean interiors, and ample luggage space."
+                "Whether it's a Shillong weekend trip, Cherrapunji waterfall tour, Dawki boating day, or a Kaziranga wildlife safari, our Tempo Traveller ensures everyone travels together in comfort."
               ) : service.id === 'force_urbania' ? (
                 "Travel together in style with the premium Force Urbania 17-seater, designed for larger groups heading from Guwahati to Shillong, Cherrapunji, Dawki, Kaziranga, and other Meghalaya destinations. With modern interiors, powerful performance, and reliable drivers, this is the perfect choice for corporate outings, family holidays, and group tours."
               ) : service.id === 'ertiga_cab' ? (
@@ -600,7 +600,7 @@ const ServiceDetails = () => {
               ) : service.id === 'innova_cab' ? (
                 "Travel in comfort with our premium Innova rentals, ideal for family holidays, group tours, and business travel across Northeast India. Start from Guwahati and explore Shillong, Cherrapunji, Dawki, Mawlynnong, or Kaziranga with professional drivers and well-maintained vehicles."
               ) : service.id === 'tempo_traveller' ? (
-                "Planning a Meghalaya trip with family, friends, or colleagues? Our spacious Tempo Travellers are the best choice for group tours from Guwahati to Shillong, Cherrapunji, Dawki, Kaziranga, and more. Travel comfortably with experienced drivers, clean interiors, and ample luggage space."
+                "Whether it's a Shillong weekend trip, Cherrapunji waterfall tour, Dawki boating day, or a Kaziranga wildlife safari, our Tempo Traveller ensures everyone travels together in comfort."
               ) : service.id === 'ertiga_cab' ? (
                 "From a relaxing Shillong holiday to an adventure-filled Cherrapunji trip, a Dawki river journey, or a Kaziranga safari – the Ertiga is the perfect choice for small families and groups looking for an affordable yet comfortable ride."
               ) : service.id === 'creta_cab' ? (
