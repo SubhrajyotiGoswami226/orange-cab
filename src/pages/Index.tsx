@@ -27,23 +27,19 @@ const Index = () => {
         {
           question: "How do I book a city cab?",
           answer:
-            "",
+            "You can book a city cab instantly through our app or website by entering your pickup and drop location. A nearby driver will be assigned, and you'll get the ride details immediately.",
         },
         {
           question: "How do I book an outstation cab?",
           answer:
-            "",
+            "To book an outstation cab, simply select 'Outstation' in our app or website, choose your destination, travel dates, and cab type. We'll confirm availability and share the complete fare before you book.",
         },
         {
           question: "How do I book a tour package?",
           answer:
-            "",
+            "We offer curated tour packages for popular destinations. You can select from the available packages in our app or website, which include vehicle, driver, and itinerary. Custom packages can also be arranged on request.",
         },
-        {
-          question: "Can I schedule a ride in advance?",
-          answer:
-            " Yes, you can schedule a ride in advance through our app or website. Just select your preferred date and time during the booking process.",
-        },
+
       ],
     },
     {
@@ -52,23 +48,19 @@ const Index = () => {
         {
           question: "What payment methods do you accept?",
           answer:
-            "",
+            "We accept multiple payment options including cash, credit/debit cards, UPI, mobile wallets, and net banking. You can choose your preferred payment method at the time of booking or after your ride.",
         },
         {
           question: "Are prices fixed or metered?",
           answer:
-            "",
+            "City rides are usually metered, while outstation trips and tour packages have fixed fares that are shown upfront. You'll always know the fare before confirming your booking.",
         },
         {
           question: "Do you charge extra for waiting time?",
           answer:
-            "",
+            "Yes, a nominal waiting charge applies if the driver has to wait beyond the free waiting period. The applicable rate will be clearly shown in your booking details.",
         },
-        {
-          question: "Is there a peak hour surcharge?",
-          answer:
-            "Yes. A small surcharge may apply during high-demand periods such as rush hours or special events. The exact fare will be shown before you confirm your booking.",
-        },
+
       ],
     },
     {
@@ -77,23 +69,19 @@ const Index = () => {
         {
           question: "Are your drivers verified?",
           answer:
-            "",
+            "Yes, all our drivers undergo a thorough verification process, including ID checks, background verification, and training to ensure passenger safety and service quality.",
         },
         {
           question: "Do your cabs have GPS tracking?",
           answer:
-            "",
+            "Yes, every cab is equipped with GPS tracking. You can share your live ride location with family or friends for extra safety and peace of mind.",
         },
         {
           question: "What should I do if I leave something in the cab?",
           answer:
-            "",
+            "If you've left an item behind, contact our customer support through the app or helpline. We'll coordinate with the driver to help retrieve your belongings as quickly as possible.",
         },
-        {
-          question: "Do you offer 24/7 service?",
-          answer:
-            "",
-        },
+
       ],
     },
   ];
