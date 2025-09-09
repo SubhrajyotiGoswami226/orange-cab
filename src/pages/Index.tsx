@@ -130,11 +130,11 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Outstation Cab
+              Outstation Car Rental from Guwahati – Meghalaya, Assam & Northeast Tours
             </h2>
             <p className="text-xl text-white/90 max-w-4xl mx-auto mb-10 leading-relaxed">
-              Planning for Meghalaya Arunachal Nagaland Assam Outstation holidays?<br />
-              Contact us for rates and a complimentary itinerary assistance.
+              Book a cab from Guwahati to Shillong, Cherrapunji, Dawki, Kaziranga, Tawang & more. <br />
+              Affordable packages with experienced local drivers.
             </p>
             <a
               href={`https://wa.me/919394939500?text=${encodeURIComponent("Hi Team, I am interested for Outstation Cab")}`}
@@ -186,10 +186,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Popular Outstation Tours
+             Popular Northeast India Tours with Car Rental from Guwahati
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Explore the beautiful Northeast India
+             Explore Shillong, Cherrapunji & Dawki with a private rental cab from Guwahati. Comfortable SUVs & tempo travellers with local drivers.
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-600 mx-auto mt-6 rounded-full"></div>
           </div>
