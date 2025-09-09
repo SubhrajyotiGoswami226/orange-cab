@@ -26,7 +26,7 @@ export const Hero: React.FC<HeroProps> = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 md:pt-24">
       {/* Full background */}
       <div className="absolute inset-0 z-0">
         <div
@@ -63,7 +63,7 @@ export const Hero: React.FC<HeroProps> = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
             <Button
               onClick={() => handleAction('book')}
               size="lg"
