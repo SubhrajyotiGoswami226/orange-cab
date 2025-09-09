@@ -53,12 +53,13 @@ export const Hero: React.FC<HeroProps> = () => {
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Premium Cab Services 
-            <span className="block text-orange-400 mt-2">in Guwahati</span>
+            <span className="block text-orange-400 mt-2">in Guwahati – Your Travel Partner</span>
           </h1>
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed font-light">
-            Experience luxury, comfort, and reliability with Orange Cabs. Your trusted partner for city rides and memorable Northeast tours.
+           Affordable taxi hire for city rides, airport transfers, and outstation trips. Clean cars, safe rides, and reliable drivers across Assam & Northeast India
+
           </p>
 
           {/* CTA Buttons */}
