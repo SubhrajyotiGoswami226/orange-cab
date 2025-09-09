@@ -133,8 +133,16 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  /* Hide scrollbar */
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
   html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
 }
 
