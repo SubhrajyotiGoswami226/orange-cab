@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = () => {
             <Button
               onClick={() => handleAction('book')}
               size="lg"
-              className="bg-orange-500 hover:bg-orange-600 text-white border-0 px-8 h-14 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-orange-500 hover:bg-orange-600 text-white border-0 px-8 h-14 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-64"
             >
               <MessageCircle className="mr-3 w-5 h-5" />
               Book on WhatsApp
@@ -75,9 +75,8 @@ export const Hero: React.FC<HeroProps> = () => {
             </Button>
             <Button
               onClick={() => handleAction('call')}
-              variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-black px-8 h-14 text-lg font-semibold transition-all duration-300 hover:scale-105"
+              className="bg-transparent hover:bg-white hover:text-black text-white border-2 border-white px-8 h-14 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-64"
             >
               <Phone className="mr-3 w-5 h-5" />
               Call Now
