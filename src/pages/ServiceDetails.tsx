@@ -286,25 +286,6 @@ const ServiceDetails = () => {
             answer: "Yes, we provide convenient pick-up and drop-off from Guwahati Airport, Railway Station, and city hotels."
           }
         ];
-      case 'force_urbania':
-        return [
-          {
-            question: "How many people can travel in the Force Urbania 17 Seater?",
-            answer: "It can comfortably seat up to 17 passengers, making it ideal for group trips."
-          },
-          {
-            question: "Can I book the Urbania for a Guwahati to Shillong and Cherrapunji tour?",
-            answer: "Yes, the Urbania is available for all Meghalaya routes including Shillong, Cherrapunji, Dawki, Mawlynnong, and Kaziranga."
-          },
-          {
-            question: "Are fuel and driver expenses included in the rental price?",
-            answer: "Yes, fuel, driver charges, and driver lodging are all included in the package."
-          },
-          {
-            question: "Does the vehicle have AC and entertainment features?",
-            answer: "Yes, the Urbania comes with full air-conditioning and an entertainment system for a comfortable group travel experience."
-          }
-        ];
       case 'creta_cab':
         return [
           {
