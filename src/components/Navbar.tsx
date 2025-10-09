@@ -39,12 +39,11 @@ export const Navbar = () => {
     }
   };
 
-  const handleLogoClick = () => {
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
     if (location.pathname !== "/") {
-      // If on another page, go to home first then scroll to hero
       window.location.href = "/#hero";
     } else {
-      // Scroll to hero section
       scrollToSection("hero");
     }
   };
@@ -71,10 +70,10 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           
           {/* Logo */}
-          <button onClick={handleLogoClick} className="flex items-center text-2xl font-bold hover:scale-105 transition-transform duration-300">
+          <Link to="/" onClick={handleLogoClick} className="flex items-center text-2xl font-bold hover:scale-105 transition-transform duration-300">
             <span className="text-orange-500">Orange</span>
             <span className="text-white">Cab</span>
-          </button>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
