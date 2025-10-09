@@ -19,7 +19,7 @@ export const Navbar = () => {
     { label: "Services", href: "/", id: "services" },
     { label: "Our Fleet", href: "/", id: "features" },
     { label: "Tours", href: "/", id: "tours" },
-    { label: "About Us", href: "/", id: "about" },
+    { label: "About Us", href: "/about-us", id: "about" },
     { label: "Terms & Conditions", href: "/terms-and-conditions", id: "terms" },
   ];
 
@@ -41,7 +41,7 @@ export const Navbar = () => {
   };
 
   const handleNavClick = (item: NavItem) => {
-    if (item.id === "home" || item.id === "terms") {
+    if (item.id === "home" || item.id === "terms" || item.id === "about") {
       // Normal navigation
       window.location.href = item.href;
     } else {
