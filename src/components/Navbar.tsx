@@ -15,7 +15,6 @@ export const Navbar = () => {
 
   const navItems: NavItem[] = [
     { label: "Home", href: "/", id: "home" },
-    { label: "Cab Booking", href: "/", id: "services" },
     { label: "Services", href: "/", id: "services" },
     { label: "Our Fleet", href: "/", id: "features" },
     { label: "Tours", href: "/", id: "tours" },
