@@ -8,6 +8,7 @@ import { TourCard } from '@/components/TourCard';
 import { ContactSection } from '@/components/ContactSection';
 import FloatingActions from '@/components/FloatingActions';
 import FAQSection from '@/components/FAQSection';
+import { Footer } from '@/components/Footer';
 import servicesData from '@/data/services.json';
 import featuresJson from '@/data/features.json';
 
@@ -125,7 +126,7 @@ const Index = () => {
       </section>
 
       {/* Outstation Cab Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden">
+      <section id="outstation" className="py-20 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center relative z-10">
@@ -255,9 +256,9 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">About</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="#about" className="hover:text-orange-500">Our Story</a></li>
+                <li><Link to="/about-us" className="hover:text-orange-500">Our Story</Link></li>
                 <li><a href="#services" className="hover:text-orange-500">Services</a></li>
-                <li><a href="#fleet" className="hover:text-orange-500">Fleet</a></li>
+                <li><a href="#features" className="hover:text-orange-500">Fleet</a></li>
                 <li><a href="#tours" className="hover:text-orange-500">Tours</a></li>
               </ul>
             </div>
@@ -265,7 +266,7 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Bookings</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="#cab" className="hover:text-orange-500">City Cab Booking</a></li>
+                <li><a href="#services" className="hover:text-orange-500">City Cab Booking</a></li>
                 <li><a href="#outstation" className="hover:text-orange-500">Outstation Cab Booking</a></li>
                 <li><a href="#tours" className="hover:text-orange-500">Tour Packages</a></li>
                 <li><a href="#faq" className="hover:text-orange-500">Finance FAQ</a></li>
@@ -275,7 +276,7 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="/contact" className="hover:text-orange-500">Contact Us</a></li>
+                <li><a href="#contact" className="hover:text-orange-500">Contact Us</a></li>
                 <li><Link to="/terms-and-conditions" className="hover:text-orange-500">Terms & Conditions</Link></li>
                 <li><a href="/privacy-policy" className="hover:text-orange-500">Privacy Policy</a></li>
               </ul>

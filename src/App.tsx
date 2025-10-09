@@ -11,6 +11,8 @@ import { ServiceCard } from "./components/ServiceCard";
 import CabBooking from '@/pages/CabBooking';
 import ServiceDetails from '@/pages/ServiceDetails';
 import TourDetails from '@/pages/TourDetails';
+import AboutUs from '@/pages/AboutUs';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
             <Route path="/creta-cab-rental-in-guwahati" element={<ServiceDetails />} />
             <Route path="/urbania-booking" element={<UrbaniaBooking />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/service/:serviceId" element={<ServiceDetails />} />
             <Route path="/tour/:tourId" element={<TourDetails />} />
     
