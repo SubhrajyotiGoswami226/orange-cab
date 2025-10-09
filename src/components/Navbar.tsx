@@ -39,6 +39,15 @@ export const Navbar = () => {
     }
   };
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      window.location.href = "/#hero";
+    } else {
+      scrollToSection("hero");
+    }
+  };
+
   const handleNavClick = (item: NavItem) => {
     if (item.id === "home" || item.id === "terms" || item.id === "about") {
       // Normal navigation
@@ -61,7 +70,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           
           {/* Logo */}
-          <Link to="/" className="flex items-center text-2xl font-bold hover:scale-105 transition-transform duration-300">
+          <Link to="/" onClick={handleLogoClick} className="flex items-center text-2xl font-bold hover:scale-105 transition-transform duration-300">
             <span className="text-orange-500">Orange</span>
             <span className="text-white">Cab</span>
           </Link>
